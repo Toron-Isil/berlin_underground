@@ -1,0 +1,230 @@
+
+
+/* the viewport has 100vh, body 98vh + border 1vh (1 top + 1 bottom = 2vh) = 100vh */
+
+body {
+  background-color: rgb(42, 42, 42);
+  color:rgb(255, 190, 0);
+  font-family: 'Oswald', sans-serif;
+  border: 1vh solid rgb(255, 190, 0);
+  border-radius: 10px;
+  height: 98vh;
+}
+
+h1 {
+  margin: 0;
+  padding-top: 5px;
+  font-size: 2.4rem;
+  text-align: center;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
+}
+
+h2 {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+h2, p, a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+/*  header 20vh + section 70vh (article with 60vh as a part) + footer 10vh = 100vh */
+
+header {
+  margin-top: 0;
+  padding-top: 0.5rem;
+  background-image: url(img/1998_Fichtestollen.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 20vh;
+  object-fit: scale-down;
+}
+
+/*  deactivated part from the try with burger-menu with fontawesome */
+/* i {
+    font-size: 2.2rem;
+    color: rgb(255, 190, 0)
+} */
+
+.menu a:link {
+  color: rgb(255, 190, 0);
+}
+
+.menu a:visited {
+  color: rgb(255, 190, 0);
+}
+
+.menu a:active {
+  color: rgb(255, 229, 150);
+}
+
+a:link {
+  color: rgb(255, 190, 0);
+}
+
+a:active {
+  color: rgb(255, 229, 150);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ul li {
+  display:inline-block;
+  vertical-align: bottom;
+  margin: 0;
+  padding: 3vh 1vw 0vh;
+  list-style-type: none;
+}
+
+section {
+  margin-top: 0;
+  padding-top: 1px;
+  background-color: rgb(23, 23, 23);
+  height: 70vh;
+}
+
+section .article {
+  box-sizing: border-box;
+  height: 60vh;
+  letter-spacing: 0.1em;
+  line-height: 1.3;
+  padding-top: 4px;
+  padding-left: 2rem;
+  padding-bottom: 10vh;
+  background-color: rgb(42, 42, 42);
+  overflow: auto;
+  background-attachment: scroll;
+}
+
+/* Footer always at the bottom */
+footer {
+  border-top: 2px solid  rgb(255, 190, 0);
+  height: 10vh;
+  position: absolute;
+  right: 0;
+  bottom: 1vh;  /* needed for the border of the body */
+  left: 0;
+  margin-left: 1vh;
+  margin-right: 1vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: black;
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgb(255, 190, 0);
+  border-radius: 10px;
+}
+
+/* not as i wished, cause the '|' became a part of the link */
+/* footer a::after {   
+  content: ' |';
+} */
+
+
+/* ******   @media style   ***** */
+
+@media (min-width: 800px) {
+/*  so the person in the background-picture don't "loose" his head */  
+  header {
+    height: 30vh;     
+  }
+/*  to get 100vh - while header goes from 20vh to 30vh, then article goes from 60vh to 50vh */
+
+  section {
+    height: 60vh;     
+  }
+
+  section .article {
+    height: 50vh;     
+  }
+
+  .menu li {
+    padding: 10vh 1vw 0vh;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
+    color:rgb(255, 190, 0);
+  }
+}
+
+@media (min-width: 501px) { 
+  footer p a {
+    font-size: 1.5rem;
+  }
+
+  .copyright  {
+    font-size: 1.3rem;
+  }
+}
+
+/*  may this, or the one above is not necessary  */
+@media (max-width: 500px) { 
+  footer p a {
+    font-size: 1.5rem;
+  }
+
+  .copyright  {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 450px) { 
+  footer p a {
+    font-size: 1.3rem;
+  }
+
+  .copyright  {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
+  footer p a {
+    font-size: 1.1rem;
+  }
+
+  .copyright  {
+    font-size: 0.7rem;
+  }
+
+  .menu li {
+  font-size: 1.3rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
+  color:rgb(255, 190, 0);
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  footer p, footer p a {
+    font-size: 1rem;
+  }
+
+  .copyright  {
+    font-size: 0.6rem;
+  }
+
+  .menu li {
+  font-size: 1rem;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
+  color:rgb(255, 190, 0);
+  }
+}
