@@ -72,7 +72,7 @@ a {
   text-decoration: none;
 }
 
-ul, ul li {
+ul, ul, li {
   display:inline-block;
   vertical-align: bottom;
   margin: 0;
@@ -87,7 +87,7 @@ section {
   height: 70vh;
 }
 
-section .article {
+.article {
   box-sizing: border-box;
   height: 60vh;
   letter-spacing: 0.1em;
@@ -226,5 +226,15 @@ footer {
   font-size: 1rem;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
   color:rgb(255, 190, 0);
+  }
+}
+@media (min-width: 910px) {
+ .article {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 4rem;
+    margin-left: 8rem;
+    line-height: 1.5;
+    text-align: justify;
   }
 }
