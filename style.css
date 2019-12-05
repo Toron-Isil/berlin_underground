@@ -29,7 +29,7 @@ h2, p, a {
 }
 
 
-/*  header 20vh + section 70vh (article with 60vh as a part) + footer 10vh = 100vh */
+/*  header 20vh + article 70vh (article with 60vh as a part) + footer 10vh = 100vh */
 
 header {
   margin-top: 0;
@@ -48,10 +48,7 @@ header {
     color: rgb(255, 190, 0)
 } */
 
-.menu a:link {
-  color: rgb(255, 190, 0);
-}
-
+.menu a:link,
 .menu a:visited {
   color: rgb(255, 190, 0);
 }
@@ -80,14 +77,13 @@ ul, ul, li {
   list-style-type: none;
 }
 
-section {
+article {
   margin-top: 0;
   padding-top: 1px;
-  background-color: rgb(23, 23, 23);
   height: 70vh;
 }
 
-.article {
+.container {
   box-sizing: border-box;
   height: 60vh;
   letter-spacing: 0.1em;
@@ -134,11 +130,11 @@ footer {
   }
 /*  to get 100vh - while header goes from 20vh to 30vh, then article goes from 60vh to 50vh */
 
-  section {
+  article {
     height: 60vh;     
   }
 
-  section .article {
+  .container {
     height: 50vh;     
   }
 
@@ -229,11 +225,16 @@ footer {
   }
 }
 @media (min-width: 910px) {
- .article {
+
+  article {
+    width: 30em;
+    margin: 0 auto;
+  }
+
+ .container {
     padding-top: 1rem;
     padding-left: 2rem;
     padding-right: 4rem;
-    margin-left: 8rem;
     line-height: 1.5;
     text-align: justify;
   }
