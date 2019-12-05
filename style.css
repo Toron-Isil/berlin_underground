@@ -29,7 +29,7 @@ h2, p, a {
 }
 
 
-/*  header 20vh + section 70vh (article with 60vh as a part) + footer 10vh = 100vh */
+/*  header 20vh + article 70vh (article with 60vh as a part) + footer 10vh = 100vh */
 
 header {
   margin-top: 0;
@@ -48,10 +48,7 @@ header {
     color: rgb(255, 190, 0)
 } */
 
-.menu a:link {
-  color: rgb(255, 190, 0);
-}
-
+.menu a:link,
 .menu a:visited {
   color: rgb(255, 190, 0);
 }
@@ -72,7 +69,7 @@ a {
   text-decoration: none;
 }
 
-ul, ul li {
+ul, ul, li {
   display:inline-block;
   vertical-align: bottom;
   margin: 0;
@@ -80,14 +77,13 @@ ul, ul li {
   list-style-type: none;
 }
 
-section {
+article {
   margin-top: 0;
   padding-top: 1px;
-  background-color: rgb(23, 23, 23);
   height: 70vh;
 }
 
-section .article {
+.container {
   box-sizing: border-box;
   height: 60vh;
   letter-spacing: 0.1em;
@@ -134,11 +130,11 @@ footer {
   }
 /*  to get 100vh - while header goes from 20vh to 30vh, then article goes from 60vh to 50vh */
 
-  section {
+  article {
     height: 60vh;     
   }
 
-  section .article {
+  .container {
     height: 50vh;     
   }
 
@@ -226,5 +222,20 @@ footer {
   font-size: 1rem;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.75);
   color:rgb(255, 190, 0);
+  }
+}
+@media (min-width: 910px) {
+
+  article {
+    width: 30em;
+    margin: 0 auto;
+  }
+
+ .container {
+    padding-top: 1rem;
+    padding-left: 2rem;
+    padding-right: 4rem;
+    line-height: 1.5;
+    text-align: justify;
   }
 }
